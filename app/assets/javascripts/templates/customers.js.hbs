@@ -1,0 +1,10 @@
+<article id="customers">
+    <h1>Customers{{#link-to 'customers.new'}}New Customer{{/link-to}}</h1>
+    {{input value="" placeholder="search" class="search"}}
+    <ul>
+        {{#each customer in customers}}
+            {{#link-to 'customer' customer tagName="li"}}{{customer.nameFull}}{{/link-to}}
+        {{/each}}
+    </ul>
+</article>
+{{outlet}}

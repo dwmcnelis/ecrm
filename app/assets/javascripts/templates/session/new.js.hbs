@@ -1,0 +1,30 @@
+<article id="session">
+    {{#if showError}}
+        <div class="error">Username/password invalid.</div>
+    {{/if}}
+
+    <form >
+        <fieldset>
+            <dl>
+                <dt>
+                    <label>Username:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.username }}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label>Password:</label>
+                </dt>
+                <dd>
+                    {{input type="password" value=fields.password}}
+                </dd>
+            </dl>
+        </fieldset>
+
+        <fieldset class='actions'>
+            <input {{action 'login'}} onEvent="click" type='submit' value='Login'>
+        </fieldset>
+    </form>
+</article>

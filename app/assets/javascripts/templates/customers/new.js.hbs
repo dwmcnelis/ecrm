@@ -1,0 +1,90 @@
+<article id="customer">
+    <h1>New Customer</h1>
+
+    {{#if showError}}
+        <div class="error">Customers must have a first and last name.</div>
+    {{/if}}
+
+    <form>
+
+        <fieldset>
+            <dl>
+                <dt>
+                    <label for="view.email.elementId">Email:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.email  viewName="email"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.company.elementId">Company:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.company  viewName="company"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.nameFirst.elementId">First Name:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.nameFirst  viewName="nameFirst"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.nameLast.elementId">Last Name:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.nameLast  viewName="nameLast"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.phone.elementId">Phone:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.phone  viewName="phone"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.address.elementId">Address:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.address  viewName="address"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.city.elementId">City:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.city  viewName="city"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.state.elementId">State:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.state  viewName="state"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.postal.elementId">Zip:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=fields.postal  viewName="postal"}}
+                </dd>
+            </dl>
+        </fieldset>
+
+        <fieldset class='actions'>
+            <input {{action 'createCustomer'}} onEvent="click" type='submit' value='Create Customer'>
+        </fieldset>
+
+    </form>
+</article>

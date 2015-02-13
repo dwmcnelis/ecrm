@@ -1,0 +1,59 @@
+{{outlet}}
+
+{{#unless isEditing}}
+    <article id="customer">
+        <h1>
+            {{nameFull}}
+            {{#link-to 'customer.edit' model classNames="edit"}}edit{{/link-to}}
+        </h1>
+
+        <p>
+            Email: {{email}}
+        </p>
+
+        <p>
+            Company: {{company}}
+        </p>
+
+        <p>
+            Email: {{email}}
+        </p>
+
+        <p>
+            Phone: {{phone}}
+        </p>
+
+        <p>
+            Address:
+            {{address}}
+            {{city}},&nbsp;{{state}}&nbsp;{{postal}}
+        </p>
+
+        <!--
+        <p>
+            <label for="view.status.elementId">Status:</label>
+            {{view "select" content=App.Customer.STATUSES value=model.status}}
+        </p>
+
+        <p>
+            <label for="view.status.elementId">Notes:</label>
+            <br>
+            {{textarea value=model.notes viewName="notes"}}
+        </p>
+        -->
+
+        <p>
+            <a {{action 'delete' on="click"}} class='delete' href='#'>delete</a>
+            <input {{action 'saveChanges'}} onEvent="click" type='submit' value='Save Changes'>
+
+            {{#if showUnsavedMessage}}
+                <div class="unsaved">unsaved changes</div>
+            {{/if}}
+
+            {{#if isSaving}}
+                <div class="saving">saving...</div>
+            {{/if}}
+        </p>
+
+    </article>
+{{/unless}}

@@ -1,0 +1,85 @@
+<article id="customer">
+    <h1>{{nameFull}}</h1>
+
+    <form>
+        <fieldset>
+            <dl>
+                <dt>
+                    <label for="view.email.elementId">Email:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.email  viewName="email"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.company.elementId">Company:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.company  viewName="company"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.nameFirst.elementId">First Name:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.nameFirst  viewName="nameFirst"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.nameLast.elementId">Last Name:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.nameLast  viewName="nameLast"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.phone.elementId">Phone:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.phone  viewName="phone"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.address.elementId">Address:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.address  viewName="address"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.city.elementId">City:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.city  viewName="city"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.state.elementId">State:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.state  viewName="state"}}
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <label for="view.postal.elementId">Zip:</label>
+                </dt>
+                <dd>
+                    {{input type="text" value=model.postal  viewName="postal"}}
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset class='actions'>
+            <input {{action 'saveChanges'}} onEvent="click" type='submit' value='Save Changes'>
+            <a {{action 'cancel' on="click"}} class='cancel' href='#'>cancel</a>
+        </fieldset>
+
+    </form>
+</article>

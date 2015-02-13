@@ -1,0 +1,15 @@
+# Default use mysql2
+#
+default: &default
+
+# Development
+development:
+  <<: *default
+
+# Test
+test:
+  <<: *default
+
+# Production
+production:
+  <<: *default
